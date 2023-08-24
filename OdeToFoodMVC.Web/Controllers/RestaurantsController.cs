@@ -7,10 +7,11 @@ using System.Web.Mvc;
 
 namespace OdeToFoodMVC.Web.Controllers
 {
-    public class HomeController : Controller
+    public class RestaurantsController : Controller
     {
-        IRestaurantData db;
-        public HomeController(IRestaurantData db)
+        private readonly IRestaurantData db;
+
+        public RestaurantsController(IRestaurantData db)
         {
             this.db = db;
         }
@@ -19,18 +20,17 @@ namespace OdeToFoodMVC.Web.Controllers
             var model = db.GetAll();
             return View(model);
         }
-
-        public ActionResult About()
+        public ActionResult Details(int id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var model = db.Get(id);
+            if (model == null)
+            {
+                return View("NotFound");
+            }
+            return View(model);
         }
-
-        public ActionResult Contact()
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
