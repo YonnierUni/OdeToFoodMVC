@@ -19,5 +19,6 @@ namespace OdeToFood.Data.Models
 
         [Display(Name = "Type of food")]
         public ProductType Property { get; set; }
+        public ProductStatus Status { get; set; }
     }
 }

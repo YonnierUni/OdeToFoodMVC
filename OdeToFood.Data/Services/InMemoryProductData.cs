@@ -13,16 +13,16 @@ namespace OdeToFood.Data.Services
         {
             products = new List<Product>()
             {
-                new Product { Id = 1, Name = "Scott's Pizza", Property = ProductType.Apartamentos },
-                new Product { Id = 2, Name = "Taste of Italy", Property = ProductType.Bienes },
-                new Product { Id = 3, Name = "Spice Delight", Property = ProductType.Bienes },
-                new Product { Id = 4, Name = "Le Croissant", Property = ProductType.Terrenos },
-                new Product { Id = 5, Name = "Mamma Mia", Property = ProductType.Bienes },
-                new Product { Id = 6, Name = "Curry Palace", Property = ProductType.Apartamentos },
-                new Product { Id = 7, Name = "Bistro Bon Appétit", Property = ProductType.Vehiculos },
-                new Product { Id = 8, Name = "Pasta Paradiso", Property = ProductType.Apartamentos },
-                new Product { Id = 9, Name = "Tandoori Nights", Property = ProductType.Terrenos },
-                new Product { Id = 10, Name = "La Belle Property", Property = ProductType.Bienes }
+                new Product { Id = 1, Name = "Scott's Pizza", Property = ProductType.Apartamentos, Status = ProductStatus.Inactive },
+                new Product { Id = 2, Name = "Taste of Italy", Property = ProductType.Bienes, Status = ProductStatus.Inactive  },
+                new Product { Id = 3, Name = "Spice Delight", Property = ProductType.Bienes, Status = ProductStatus.Active  },
+                new Product { Id = 4, Name = "Le Croissant", Property = ProductType.Terrenos, Status = ProductStatus.Inactive  },
+                new Product { Id = 5, Name = "Mamma Mia", Property = ProductType.Bienes, Status = ProductStatus.Inactive  },
+                new Product { Id = 6, Name = "Curry Palace", Property = ProductType.Apartamentos, Status = ProductStatus.Active  },
+                new Product { Id = 7, Name = "Bistro Bon Appétit", Property = ProductType.Vehiculos, Status = ProductStatus.Inactive  },
+                new Product { Id = 8, Name = "Pasta Paradiso", Property = ProductType.Apartamentos, Status = ProductStatus.Active  },
+                new Product { Id = 9, Name = "Tandoori Nights", Property = ProductType.Terrenos, Status = ProductStatus.Inactive  },
+                new Product { Id = 10, Name = "La Belle Property", Property = ProductType.Bienes, Status = ProductStatus.Inactive  }
             };
         }
 
