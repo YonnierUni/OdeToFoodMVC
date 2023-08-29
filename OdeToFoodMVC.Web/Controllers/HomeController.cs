@@ -9,8 +9,8 @@ namespace OdeToFoodMVC.Web.Controllers
 {
     public class HomeController : Controller
     {
-        IRestaurantData db;
-        public HomeController(IRestaurantData db)
+        IProductData db;
+        public HomeController(IProductData db)
         {
             this.db = db;
         }

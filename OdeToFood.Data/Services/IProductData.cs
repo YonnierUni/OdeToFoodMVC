@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace OdeToFood.Data.Services
 {
-    public interface IRestaurantData
+    public interface IProductData
     {
-        IEnumerable<Restaurant> GetAll();
-        Restaurant Get(int id);
-        void Add(Restaurant restaurant);
-        void Update(Restaurant restaurant);
+        IEnumerable<Product> GetAll();
+        Product Get(int id);
+        void Add(Product product);
+        void Update(Product product);
         void Delete(int id);
     }
 }

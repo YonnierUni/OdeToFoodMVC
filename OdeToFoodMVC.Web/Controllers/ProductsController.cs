@@ -9,11 +9,11 @@ using System.Web.Mvc;
 
 namespace OdeToFoodMVC.Web.Controllers
 {
-    public class RestaurantsController : Controller
+    public class ProductsController : Controller
     {
-        private readonly IRestaurantData db;
+        private readonly IProductData db;
 
-        public RestaurantsController(IRestaurantData db)
+        public ProductsController(IProductData db)
         {
             this.db = db;
         }
@@ -44,12 +44,12 @@ namespace OdeToFoodMVC.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Restaurant restaurant)
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Add(restaurant);
-                return RedirectToAction("Details", new { id = restaurant.Id });
+                db.Add(product);
+                return RedirectToAction("Details", new { id = product.Id });
             }
             return View();
         }
@@ -66,14 +66,14 @@ namespace OdeToFoodMVC.Web.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Restaurant restaurant)
+        public ActionResult Edit(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Update(restaurant);
-                return RedirectToAction("Details", new { id = restaurant.Id });
+                db.Update(product);
+                return RedirectToAction("Details", new { id = product.Id });
             }
-            return View(restaurant);
+            return View(product);
         }
 
         [HttpGet]

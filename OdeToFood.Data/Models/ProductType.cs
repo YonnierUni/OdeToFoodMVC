@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace OdeToFood.Data.Models
 {
-    public enum CuisineType
+    public enum ProductType
     {
         None,
-        Italian,
-        Indian,
-        French
+        Bienes,
+        Vehiculos,
+        Terrenos,
+        Apartamentos
     }
 }

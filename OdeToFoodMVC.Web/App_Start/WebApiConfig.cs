@@ -15,7 +15,7 @@ namespace OdeToFoodMVC.Web
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
 
-                // /api/restaurants
+                // /api/products
 
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }

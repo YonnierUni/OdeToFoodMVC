@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OdeToFood.Data.Models
 {
-    public class Restaurant
+    public class Product
     {
         public int Id { get; set; }
 
@@ -18,6 +18,6 @@ namespace OdeToFood.Data.Models
         public string Name { get; set; }
 
         [Display(Name = "Type of food")]
-        public CuisineType Cuisine { get; set; }
+        public ProductType Property { get; set; }
     }
 }

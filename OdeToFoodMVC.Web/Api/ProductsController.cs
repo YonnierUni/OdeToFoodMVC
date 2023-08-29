@@ -9,16 +9,16 @@ using System.Web.Http;
 
 namespace OdeToFoodMVC.Web.Api
 {
-    public class RestaurantsController : ApiController
+    public class ProductsController : ApiController
     {
-        private readonly IRestaurantData db;
+        private readonly IProductData db;
 
-        public RestaurantsController(IRestaurantData db)
+        public ProductsController(IProductData db)
         {
             this.db = db;
         }
 
-        public IEnumerable<Restaurant> Get()
+        public IEnumerable<Product> Get()
         {
             var model = db.GetAll();
             return model;
