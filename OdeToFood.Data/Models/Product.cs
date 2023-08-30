@@ -16,9 +16,12 @@ namespace OdeToFood.Data.Models
         [MinLength(5)]
         [MaxLength(255)]
         public string Name { get; set; }
+        public string Description { get; set; }
 
-        [Display(Name = "Type of food")]
+        [Display(Name = "Type of product")]
         public ProductType Property { get; set; }
+        public decimal Price { get; set; }
+        public DateTime CreateDate { get; set; }
         public ProductStatus Status { get; set; }
     }
 }

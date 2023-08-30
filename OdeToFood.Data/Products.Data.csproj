@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\InMemoryProductData.cs" />
     <Compile Include="Services\IProductData.cs" />
-    <Compile Include="Services\OdeToFoodDbContext.cs" />
+    <Compile Include="Services\ProductsDbContext.cs" />
     <Compile Include="Services\SqlProductData.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33927.289
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFoodMVC.Web", "OdeToFoodMVC.Web\OdeToFoodMVC.Web.csproj", "{25650D69-4FF9-4963-B707-9DE31D84988A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsMVC.Web", "OdeToFoodMVC.Web\ProductsMVC.Web.csproj", "{25650D69-4FF9-4963-B707-9DE31D84988A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{D65128F0-F6C8-4AB6-B9AF-E3DBA0F1D460}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Data", "OdeToFood.Data\Products.Data.csproj", "{D65128F0-F6C8-4AB6-B9AF-E3DBA0F1D460}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

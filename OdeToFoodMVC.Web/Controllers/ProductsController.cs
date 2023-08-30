@@ -19,10 +19,24 @@ namespace OdeToFoodMVC.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            var model = db.GetAll();
-            return View(model);
+            List<Product> productosFiltrados = new List<Product>();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                productosFiltrados = db.GetAll().Where(p =>
+                    p.Id.ToString().Contains(searchString) ||
+                    p.Name.IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0
+                ).ToList();
+            }
+            else
+            {
+                var model = db.GetAll();
+                return View(model);
+            }
+
+            return View(productosFiltrados);
         }
 
         [HttpGet]
@@ -92,6 +106,14 @@ namespace OdeToFoodMVC.Web.Controllers
         {
             db.Delete(id);
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [ValidateAntiForgeryToken]
+        public ActionResult GetForId(int id)
+        {
+            var model = db.Get(id);
+            return View(model);
         }
     }
 }
